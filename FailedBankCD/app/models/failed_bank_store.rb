@@ -33,6 +33,26 @@ class FailedBankStore
     save
   end
 
+  # The purpose of the load, is to pull in data from an external source, and load it into your CoreData store. It can
+  # be invoked from the REPL
+  def self.load
+    # Finds and opens the json file, from the resources dir, which contains the data to be loaded
+    path = NSBundle.mainBundle.pathForResource("Banks", ofType:"json")
+    banks = BW::JSON.parse(NSData.dataWithContentsOfFile(path))
+    puts(banks)
+    banks.each do |bank|
+      FailedBankStore.shared.add_bank do |info, details|
+        info.name = bank['name']
+        info.city = bank['city']
+        info.state = bank['state']
+        details.close_date = NSDate.dateWithNaturalLanguageString(bank['closeDate'])
+        details.update_date = NSDate.date
+        details.zip = bank['zip']
+        info.details = details
+      end
+    end
+  end
+
   private
 
   def initialize
