@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    bubble-wrap (1.2.0)
     rake (10.0.4)
     rubymotion_generators (0.1.0)
       thor (~> 0.15)
@@ -10,5 +11,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bubble-wrap
   rake
   rubymotion_generators
