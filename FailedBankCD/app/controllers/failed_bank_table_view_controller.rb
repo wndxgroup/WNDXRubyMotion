@@ -1,6 +1,19 @@
 class FailedBankTableViewController < UITableViewController
+
+  include NSFetchedResultsControllerDelegate
+
   def viewDidLoad
-    view.dataSource = view.delegate = self
+    super
+    error_ptr = Pointer.new(:object)
+    @fetch_controller = FailedBankStore.shared.fetched_results_controller
+    @fetch_controller.delegate = self
+    unless @fetch_controller.performFetch(error_ptr)
+      raise "Error when fetching banks: #{error_ptr[0].description}"
+    end
+  end
+
+  def viewDidUnload
+    @fetch_controller = nil
   end
 
   def viewWillAppear(animated)
@@ -23,16 +36,20 @@ class FailedBankTableViewController < UITableViewController
   end
 
   def tableView(tableView, numberOfRowsInSection:section)
-    FailedBankStore.shared.banks.size
+    @fetch_controller.sections.objectAtIndex(section).numberOfObjects
+  end
+
+  def configureCell(cell, atIndexPath:index)
+    bank = @fetch_controller.objectAtIndexPath(index)
+    cell.textLabel.text = bank.name
+    cell.detailTextLabel.text = "#{bank.city}, #{bank.state}"
+    return cell
   end
 
   CellID = 'CellIdentifier'
   def tableView(tableView, cellForRowAtIndexPath:indexPath)
     cell = tableView.dequeueReusableCellWithIdentifier(CellID) || UITableViewCell.alloc.initWithStyle(UITableViewCellStyleSubtitle, reuseIdentifier:CellID)
-    bank = FailedBankStore.shared.banks[indexPath.row]
-    cell.textLabel.text = bank.name
-    cell.detailTextLabel.text = "#{bank.city}, #{bank.state}"
-    cell
+    configureCell(cell, atIndexPath:indexPath)
   end
 
   def tableView(tableView, editingStyleForRowAtIndexPath:indexPath)
@@ -40,8 +57,6 @@ class FailedBankTableViewController < UITableViewController
   end
 
   def tableView(tableView, commitEditingStyle:editingStyle, forRowAtIndexPath:indexPath)
-    bank = FailedBankStore.shared.banks[indexPath.row]
-    FailedBankStore.shared.remove_bank(bank)
-    tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation:UITableViewRowAnimationFade)
+    FailedBankStore.shared.remove_bank(@fetch_controller.objectAtIndexPath(indexPath))
   end
 end

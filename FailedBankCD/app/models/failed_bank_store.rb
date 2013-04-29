@@ -4,20 +4,19 @@ class FailedBankStore
     @shared ||= FailedBankStore.new
   end
 
-  def banks
-    @banks ||= begin
-      # Fetch all banks from the model, sorting by the creation date.
-      request = NSFetchRequest.alloc.init
-      request.entity = NSEntityDescription.entityForName('FailedBankInfo', inManagedObjectContext:@context)
-#      request.sortDescriptors = [NSSortDescriptor.alloc.initWithKey('creation_date', ascending:false)]
 
-      error_ptr = Pointer.new(:object)
-      data = @context.executeFetchRequest(request, error:error_ptr)
-      if data == nil
-        raise "Error when fetching data: #{error_ptr[0].description}"
-      end
-      data
-    end
+  def fetched_results_controller
+    fetch_request = NSFetchRequest.alloc.init
+#    fetch_request.entity = FailedBankInfo.entity
+    fetch_request.entity = NSEntityDescription.entityForName('FailedBankInfo', inManagedObjectContext:@context)
+    sort = NSSortDescriptor.alloc.initWithKey("details.close_date", ascending: false)
+    fetch_request.sortDescriptors = [sort]
+    fetch_request.fetchBatchSize = 20
+
+    NSFetchedResultsController.alloc.initWithFetchRequest(fetch_request,
+                                                          managedObjectContext:@context,
+                                                          sectionNameKeyPath:nil,
+                                                          cacheName:"Root")
   end
 
   def add_bank
