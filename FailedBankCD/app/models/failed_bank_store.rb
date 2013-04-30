@@ -7,7 +7,6 @@ class FailedBankStore
 
   def fetched_results_controller
     fetch_request = NSFetchRequest.alloc.init
-#    fetch_request.entity = FailedBankInfo.entity
     fetch_request.entity = NSEntityDescription.entityForName('FailedBankInfo', inManagedObjectContext:@context)
     sort = NSSortDescriptor.alloc.initWithKey("details.close_date", ascending: false)
     fetch_request.sortDescriptors = [sort]
@@ -38,7 +37,6 @@ class FailedBankStore
     # Finds and opens the json file, from the resources dir, which contains the data to be loaded
     path = NSBundle.mainBundle.pathForResource("Banks", ofType:"json")
     banks = BW::JSON.parse(NSData.dataWithContentsOfFile(path))
-    puts(banks)
     banks.each do |bank|
       FailedBankStore.shared.add_bank do |info, details|
         info.name = bank['name']
@@ -109,6 +107,5 @@ class FailedBankStore
     unless @context.save(error_ptr)
       raise "Error when saving the model: #{error_ptr[0].description}"
     end
-    @banks = nil
   end
 end
