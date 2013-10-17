@@ -13,4 +13,4 @@ a good start, doesn't include tricky stuff like relationships between entities, 
 
 While I did get it all working, with much simpler code than I found in [other](https://github.com/caramdache/games) places, 
 I do not consider this a "good" implementation of CoreData relationships.  It is, however, simple and easy to understand,
-and understanding was my goal, so I can move on to the more complex issues, like laoding a huge dataset.
+and understanding was my goal, so I can move on to the more complex issues, like loading a huge dataset.
