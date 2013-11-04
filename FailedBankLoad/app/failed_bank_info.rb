@@ -1,0 +1,1 @@
+../../FailedBankCD/app/models/failed_bank_info.rb
