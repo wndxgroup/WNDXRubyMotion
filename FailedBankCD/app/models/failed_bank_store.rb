@@ -1,7 +1,8 @@
 class FailedBankStore
   def self.shared
     # Our store is a singleton object.
-    @shared ||= FailedBankStore.new
+    Dispatch.once { @instance ||= new }
+    @instance
   end
 
   def banks
@@ -9,7 +10,6 @@ class FailedBankStore
       # Fetch all banks from the model, sorting by the creation date.
       request = NSFetchRequest.alloc.init
       request.entity = NSEntityDescription.entityForName('FailedBankInfo', inManagedObjectContext:@context)
-#      request.sortDescriptors = [NSSortDescriptor.alloc.initWithKey('creation_date', ascending:false)]
 
       error_ptr = Pointer.new(:object)
       data = @context.executeFetchRequest(request, error:error_ptr)
@@ -74,10 +74,10 @@ class FailedBankStore
   end
 
   def set_entity_properties(entity, model)
-    # set up attributes
     managed_object_class = Object.const_get(entity.managedObjectClassName)
     entities = model.entitiesByName
 
+    # set up attributes
     attributes = managed_object_class.attributes.collect do |attr|
       property = NSAttributeDescription.alloc.init
       property.name = attr[:name]
