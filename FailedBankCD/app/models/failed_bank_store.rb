@@ -62,7 +62,7 @@ class FailedBankStore
       m.entities.each {|entity| set_entity_properties(entity,m)}
     end
     store = NSPersistentStoreCoordinator.alloc.initWithManagedObjectModel(model)
-    store_url = NSURL.fileURLWithPath(File.join(NSHomeDirectory(), 'Documents', 'banks.sqlite'))
+    store_url = NSURL.fileURLWithPath(NSBundle.mainBundle.pathForResource("banks", ofType:"sqlite"))
     error_ptr = Pointer.new(:object)
     unless store.addPersistentStoreWithType(NSSQLiteStoreType, configuration:nil, URL:store_url, options:nil, error:error_ptr)
       raise "Can't add persistent SQLite store: #{error_ptr[0].description}"
