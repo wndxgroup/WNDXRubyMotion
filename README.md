@@ -14,3 +14,13 @@ a good start, doesn't include tricky stuff like relationships between entities, 
 While I did get it all working, with much simpler code than I found in [other](https://github.com/caramdache/games) places, 
 I do not consider this a "good" implementation of CoreData relationships.  It is, however, simple and easy to understand,
 and understanding was my goal, so I can move on to the more complex issues, like loading a huge dataset.
+
+## WeatherTV
+
+This example illustrates the creation of an AppleTV app, displaying weather for several pre-defined locations. This app is very loosely based on [Appcoda's tvOS introduction](https://www.appcoda.com/tvos-introduction/)
+
+## Add android example description here
+
+## Add MapKit example description here
+
+## Add WatchKit example description here
