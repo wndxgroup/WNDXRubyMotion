@@ -1,9 +1,9 @@
 class AppDelegate < PM::Delegate
   def on_load(app, options)
     locations = []
-    %w(Calgary Lethbridge).each do |city|
+    WeatherData.shared.locations.each do |location|
       locations << WeatherScreen.new.tap do |screen|
-        screen.title = city
+        screen.title = location[:name]
       end
     end
     open_tab_bar *locations
