@@ -1,0 +1,842 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		001FE4F3A3575292E8523D69B1064697 /* CZWorldWeatherOnlineAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CF3BB94DAED66A739F45DCA375F4DE /* CZWorldWeatherOnlineAPI.m */; };
+		088D263366E5E864D6D65A5803494D68 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E184A7CBDD11C7A10659350AEDCE81F /* Foundation.framework */; };
+		0FBFC0CC17782771FFD26933FF15737F /* CZWeatherData.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E409E1AE32722FE1C345573DF549E6 /* CZWeatherData.m */; };
+		1083EF2F1E252DA9A137A6FC87873861 /* CZWeatherHourlyCondition.h in Headers */ = {isa = PBXBuildFile; fileRef = 001E3F83B2E71D99EDCD54D765A22BB8 /* CZWeatherHourlyCondition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1121A9AB3F6F51A85924FAAA93B5E9BF /* CZWeatherForecastCondition.h in Headers */ = {isa = PBXBuildFile; fileRef = C5B0B0B3ED9ACB09C7977DD1BB663639 /* CZWeatherForecastCondition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FD2A8833EB3BB67AC6B2676EA2452EC /* CZWeatherCurrentCondition.h in Headers */ = {isa = PBXBuildFile; fileRef = A6DD06146A8117A89901378EBF9DD620 /* CZWeatherCurrentCondition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26863CB384FF0F7E0D0FC402E0E0D4C9 /* Pods-RubyMotion-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A15BA2A940560D2A0C77A15B20151A9 /* Pods-RubyMotion-dummy.m */; };
+		2CA4EDB4C7D5D7208A891D4FEC9D7EA8 /* CZWeatherKit.h in Headers */ = {isa = PBXBuildFile; fileRef = DB29D0367AAA3B11371BDE3086EE8753 /* CZWeatherKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3472EF9BD805C07EC5A6D27AF818FBAF /* CZWundergroundRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E45F6E19C5B7BBC23603E7483FACD99 /* CZWundergroundRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		348D7A503B97BA95108A4CD0321EBD1D /* PINMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D8C8025506C0CB18F2F13E8BC1CC1D /* PINMemoryCache.m */; };
+		3AA8F1A483065ABBB29193EF7B7FBC6D /* CZWeatherLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = F2CA0CDA41291EF0595635A5A0EC7915 /* CZWeatherLocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4294EEFAC8F6A20EDB0857B910CD5343 /* CZWeatherRequest+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 12BB8F57E025A0172751954EAE814B6F /* CZWeatherRequest+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48B2A1BE4DFDB185DD7DAC803563FE8F /* CZWundergroundAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0520366A18A2778D6B3754380370F6FA /* CZWundergroundAPI.m */; };
+		49A0E68D9D64022E451A3216DA3BB9B2 /* CZWeatherLocation+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DE4F611B7E8323BA2EA01C918DB221B3 /* CZWeatherLocation+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A90657DEE765D875E148ABA338CAC81 /* CZOpenWeatherMapRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 668A75B3410CD9FE592027E3C556CDAB /* CZOpenWeatherMapRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6085EC3E002F99C352234CB41A1FB1BF /* CZWeatherData.h in Headers */ = {isa = PBXBuildFile; fileRef = D8AFC52E5CEDD1EB2A536D5C2792A0F2 /* CZWeatherData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		621A991E790C6D1AE838F0AB9A56A66C /* CZWeatherKitTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 83EB99F7D283515BB49FDEF77A834669 /* CZWeatherKitTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D486F573527C83C6AADEA13C89793D9 /* CZWeatherCurrentCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AFB7642EEABB55537EB869986D1CA9 /* CZWeatherCurrentCondition.m */; };
+		7189CB9AED00E48445AAEA13927CCC36 /* CZForecastioRequest+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 29378B060E31BEBF9224F0A4974EEA8B /* CZForecastioRequest+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		724F5BC1F675F577D5195312B148E5FB /* PINCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 605EA5C6D67FB31C8118731390482A4E /* PINCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78421029E54D49AF8D85CC72BDD5DB4D /* CZWorldWeatherOnlineRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 04A4457379B3C78C474F1057C0CCB60C /* CZWorldWeatherOnlineRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D8735D0BDA330018531B25128B7766D /* CZOpenWeatherMapAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E55E3DDBEA53B7DB4767D3B165C7305 /* CZOpenWeatherMapAPI.m */; };
+		8016AE6CA1015B794CB30BD4710273D1 /* CZWeatherDataCache.h in Headers */ = {isa = PBXBuildFile; fileRef = D3309307833823A84BE8F4F618DF4EBC /* CZWeatherDataCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		804FF89FE25EFC48AFE6A9DC11353638 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E184A7CBDD11C7A10659350AEDCE81F /* Foundation.framework */; };
+		8141D84C2B46D8B5EE0EBE96D7808F53 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E184A7CBDD11C7A10659350AEDCE81F /* Foundation.framework */; };
+		8EA0143DB46491C7703DDD09C40F3CE3 /* CZForecastioRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E8434C951D711AB2192ABE3A7724FA4C /* CZForecastioRequest.m */; };
+		8EED894CF411CC96DE5014438E3F8690 /* PINCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1706D8636AF0E606AD852688E755A77E /* PINCache.m */; };
+		92E9E30013A54774CB8915B73D0FC3E9 /* CZWeatherAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A5850E9A30B257C45C7DEB5E3537E08 /* CZWeatherAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94620B07E33F68047E26CAE20DFFA69B /* CZWundergroundAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D96F94C09F6B908336B122127521034 /* CZWundergroundAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9D1C472B7D64DABFF5DA56FCF9ED1092 /* CZWeatherService.m in Sources */ = {isa = PBXBuildFile; fileRef = 640AFD5F9053D15C3ECEBE6AC0521805 /* CZWeatherService.m */; };
+		9E063E75E49148256D914BAD243E21BC /* NSDictionary+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = ADB93AF4235F1E9125452DFCC25E1AC2 /* NSDictionary+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E7A1C5FCA0E69A5AF44AAC36C19E775 /* CZForecastioAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = FF2C0A9E0675A6FA553CA11F1E1C7B8B /* CZForecastioAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9FCCFBA91FBD00561DE4B8A0C84C00A3 /* CZWorldWeatherOnlineRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AF0B5EEA26D43A14855327CB255447 /* CZWorldWeatherOnlineRequest.m */; };
+		A67E930555C03C8003A4265B9F891BDC /* CZWeatherHourlyCondition+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 50E75E172D7E59FD470E496E05527D6C /* CZWeatherHourlyCondition+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7A551E76CE7E1A155C74A2E43DD57E3 /* Nullability.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FAF9A0D08FE5B64F52E26F8A30B4F5 /* Nullability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A81B804573B65513A0C2B5A8C6FF8C3D /* CZWundergroundRequest+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 99D6F9DA1801279217D90923466EB457 /* CZWundergroundRequest+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B01A8902E6CFEC5402A62CC3C85CCDB5 /* CZWeatherKitInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = E937FA03FC659F2325D419FD84B57D31 /* CZWeatherKitInternal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B30142E9145D05D263F005CBAE7C51D7 /* CZPINWeatherDataCache.h in Headers */ = {isa = PBXBuildFile; fileRef = ABCCB5114B52479C47ACE5E650B60C20 /* CZPINWeatherDataCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4036F61F1FD4D1DD778DA4F34C6E6B6 /* CZWeatherRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 13779100A11912DA020899BA678592AE /* CZWeatherRequest.m */; };
+		B459084F9506800E7D820ADC959ED72E /* CZWorldWeatherOnlineAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = AF2DE20984BC9BCF25266E06A476FC9C /* CZWorldWeatherOnlineAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B764840D47737DEF248BEA94FE3F8EF0 /* NSDictionary+Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2C247332572D43763527D7354B7988 /* NSDictionary+Internal.m */; };
+		C2C017F2F6DC7343F1000649ECE14928 /* PINDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF0F9DCAC09DD3852450AF973D96372 /* PINDiskCache.m */; };
+		C562C8F557D76DE8137096B8AD416EB4 /* PINDiskCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AFCC43A3EB01ED0930B3913889E40CB /* PINDiskCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C63BCD4FACEAF59444A3D43E706AFD02 /* CZWeatherService.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AC05D35DCFC0968768FEF512F4F1980 /* CZWeatherService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D062D96BF407A6C8C1E3E7147C2C2883 /* CZPINWeatherDataCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CD13C53BE732D178B66401D9F40B998E /* CZPINWeatherDataCache.m */; };
+		D1CC57DAACF988E4BDE3AF64A80C667A /* CZWeatherForecastCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA5ECF1247EA2CC0AC5D45BD2D979A8 /* CZWeatherForecastCondition.m */; };
+		D1CEC3E47877B4286F17C4F8AD2C08D0 /* CZWeatherKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F942C5C1731C395FD36730A5B7F14B2 /* CZWeatherKit-dummy.m */; };
+		D38067B64F12CD43C196023CBBE01CCB /* CZWeatherHourlyCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 60DD4645A2AAA9E4180F1F4C84E5CC3F /* CZWeatherHourlyCondition.m */; };
+		D43083C49FB47C4B7130B28EAECC6B74 /* CZWeatherLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 066DBBE310CBF8BBFB61624C30210604 /* CZWeatherLocation.m */; };
+		D5633D956C98ADDE0D5662EC517303E9 /* CZOpenWeatherMapRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BA4E749E2860088B147DD1786056D3 /* CZOpenWeatherMapRequest.m */; };
+		D62DF6CA7BA59182B9557536D124D011 /* CZWeatherCurrentCondition+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 53BF0027438C6B8868E9982230E013C6 /* CZWeatherCurrentCondition+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D7F96C2E2EA64961BEEFB9D6EEDEE005 /* CZForecastioRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F9BFE4415C05EBD603751C1BEE20B52 /* CZForecastioRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DEC45D00112B20799EBCCE2396031B90 /* CZWeatherService+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 01254C30869056D7E5D02884DCF3CA31 /* CZWeatherService+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF9B2DE4DF55EB33829727816E1215F8 /* CZOpenWeatherMapAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 0468A9A6A7B65BCFB83A5EA55FC1FE3F /* CZOpenWeatherMapAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E3E4C4B7132C6E522DCB338BA18CC715 /* PINCacheObjectSubscripting.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D9F6363D8F3A4295F61CC21853C39FF /* PINCacheObjectSubscripting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5907299E1219DAAA4BED0E0B333B0FA /* CZClimacons.h in Headers */ = {isa = PBXBuildFile; fileRef = BDDCDE4FE30E45B47E4C73579E38376A /* CZClimacons.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EBA1DDF781FABA58FDDA8AAB64E405B5 /* CZWeatherData+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 195BC67EC988F089B70D0E45D9E3AE2F /* CZWeatherData+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC258D80FBEFD8E7C0482DBDCA1E35D2 /* CZForecastioAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 913FC46E60F3A9F8CF6C648AF50B8D3B /* CZForecastioAPI.m */; };
+		EDB74A3E4301C5429037FFA007DCFE07 /* CZWundergroundRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8840F537CDA1D16B701481C730492B9C /* CZWundergroundRequest.m */; };
+		F1EC287F7E08331953D13B9986870322 /* CZWeatherRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A9A0B4E9E2FC10DA811DB68358A64FD /* CZWeatherRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F47CE01ECC6E124C262986212F9CF72C /* PINMemoryCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F46AC05559AE56B9CB7D0D94F1C69D4 /* PINMemoryCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F5B6402A271559C0B0E35E0A1306B99C /* CZWeatherForecastCondition+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = EC8291BCF28D65CB6432E29D36DA74B6 /* CZWeatherForecastCondition+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7C0E307037F6D7A15AD65BCB3988EA4 /* CZOpenWeatherMapRequest+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 15BF3DE89F19622E7FEE4451576D2685 /* CZOpenWeatherMapRequest+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA9B8FAADCE7E3764AB2B8870FB0AE19 /* PINCache-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD19BD657A0BCBB779A887B442B1A24 /* PINCache-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0ED9302F94BF4DE37BED1A6BAD00C241 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C2F6CA7BB9025BD209F02DE8B6579D4;
+			remoteInfo = PINCache;
+		};
+		5727528D4E043FCA22C3BB97C08B0B97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C2F6CA7BB9025BD209F02DE8B6579D4;
+			remoteInfo = PINCache;
+		};
+		AAFC6E5F843E4046E2B9E79948A2C837 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49B8CD724225AA712A67BF31E74741A6;
+			remoteInfo = CZWeatherKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		001E3F83B2E71D99EDCD54D765A22BB8 /* CZWeatherHourlyCondition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CZWeatherHourlyCondition.h; path = CZWeatherKit/CZWeatherHourlyCondition.h; sourceTree = "<group>"; };
+		00CF9EECD78AB847EC061F8848839B84 /* libCZWeatherKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCZWeatherKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		01254C30869056D7E5D02884DCF3CA31 /* CZWeatherService+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CZWeatherService+Internal.h"; path = "CZWeatherKit/CZWeatherService+Internal.h"; sourceTree = "<group>"; };
+		0468A9A6A7B65BCFB83A5EA55FC1FE3F /* CZOpenWeatherMapAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CZOpenWeatherMapAPI.h; path = CZWeatherKit/CZOpenWeatherMapAPI.h; sourceTree = "<group>"; };
+		04A4457379B3C78C474F1057C0CCB60C /* CZWorldWeatherOnlineRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CZWorldWeatherOnlineRequest.h; path = CZWeatherKit/CZWorldWeatherOnlineRequest.h; sourceTree = "<group>"; };
+		0520366A18A2778D6B3754380370F6FA /* CZWundergroundAPI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CZWundergroundAPI.m; path = CZWeatherKit/CZWundergroundAPI.m; sourceTree = "<group>"; };
+		066DBBE310CBF8BBFB61624C30210604 /* CZWeatherLocation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CZWeatherLocation.m; path = CZWeatherKit/CZWeatherLocation.m; sourceTree = "<group>"; };
+		0DC2C64A19F0947D88E73341E259375A /* Pods-RubyMotion-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RubyMotion-resources.sh"; sourceTree = "<group>"; };
+		0E45F6E19C5B7BBC23603E7483FACD99 /* CZWundergroundRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CZWundergroundRequest.h; path = CZWeatherKit/CZWundergroundRequest.h; sourceTree = "<group>"; };
+		12BB8F57E025A0172751954EAE814B6F /* CZWeatherRequest+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CZWeatherRequest+Internal.h"; path = "CZWeatherKit/CZWeatherRequest+Internal.h"; sourceTree = "<group>"; };
+		13779100A11912DA020899BA678592AE /* CZWeatherRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CZWeatherRequest.m; path = CZWeatherKit/CZWeatherRequest.m; sourceTree = "<group>"; };
+		15BF3DE89F19622E7FEE4451576D2685 /* CZOpenWeatherMapRequest+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CZOpenWeatherMapRequest+Internal.h"; path = "CZWeatherKit/CZOpenWeatherMapRequest+Internal.h"; sourceTree = "<group>"; };
+		1706D8636AF0E606AD852688E755A77E /* PINCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINCache.m; path = PINCache/PINCache.m; sourceTree = "<group>"; };
+		195BC67EC988F089B70D0E45D9E3AE2F /* CZWeatherData+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CZWeatherData+Internal.h"; path = "CZWeatherKit/CZWeatherData+Internal.h"; sourceTree = "<group>"; };
+		1AA5ECF1247EA2CC0AC5D45BD2D979A8 /* CZWeatherForecastCondition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CZWeatherForecastCondition.m; path = CZWeatherKit/CZWeatherForecastCondition.m; sourceTree = "<group>"; };
+		22CF3BB94DAED66A739F45DCA375F4DE /* CZWorldWeatherOnlineAPI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CZWorldWeatherOnlineAPI.m; path = CZWeatherKit/CZWorldWeatherOnlineAPI.m; sourceTree = "<group>"; };
+		25FAF9A0D08FE5B64F52E26F8A30B4F5 /* Nullability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Nullability.h; path = PINCache/Nullability.h; sourceTree = "<group>"; };
+		29378B060E31BEBF9224F0A4974EEA8B /* CZForecastioRequest+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CZForecastioRequest+Internal.h"; path = "CZWeatherKit/CZForecastioRequest+Internal.h"; sourceTree = "<group>"; };
+		2A9A0B4E9E2FC10DA811DB68358A64FD /* CZWeatherRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CZWeatherRequest.h; path = CZWeatherKit/CZWeatherRequest.h; sourceTree = "<group>"; };
+		34D604C76EF27B236B1E843D954E9BAC /* PINCache.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PINCache.xcconfig; sourceTree = "<group>"; };
+		353814CD0A61DB8C4F5669462C367207 /* CZWeatherKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CZWeatherKit.xcconfig; sourceTree = "<group>"; };
+		3A5850E9A30B257C45C7DEB5E3537E08 /* CZWeatherAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CZWeatherAPI.h; path = CZWeatherKit/CZWeatherAPI.h; sourceTree = "<group>"; };
+		3D96F94C09F6B908336B122127521034 /* CZWundergroundAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CZWundergroundAPI.h; path = CZWeatherKit/CZWundergroundAPI.h; sourceTree = "<group>"; };
+		3F9BFE4415C05EBD603751C1BEE20B52 /* CZForecastioRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CZForecastioRequest.h; path = CZWeatherKit/CZForecastioRequest.h; sourceTree = "<group>"; };
+		50E75E172D7E59FD470E496E05527D6C /* CZWeatherHourlyCondition+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CZWeatherHourlyCondition+Internal.h"; path = "CZWeatherKit/CZWeatherHourlyCondition+Internal.h"; sourceTree = "<group>"; };
+		5289E3D48AF008CA7240ADB55C477E01 /* libPINCache.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPINCache.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		53BF0027438C6B8868E9982230E013C6 /* CZWeatherCurrentCondition+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CZWeatherCurrentCondition+Internal.h"; path = "CZWeatherKit/CZWeatherCurrentCondition+Internal.h"; sourceTree = "<group>"; };
+		5A15BA2A940560D2A0C77A15B20151A9 /* Pods-RubyMotion-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RubyMotion-dummy.m"; sourceTree = "<group>"; };
+		5AD19BD657A0BCBB779A887B442B1A24 /* PINCache-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PINCache-dummy.m"; sourceTree = "<group>"; };
+		5FF0F9DCAC09DD3852450AF973D96372 /* PINDiskCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINDiskCache.m; path = PINCache/PINDiskCache.m; sourceTree = "<group>"; };
+		605EA5C6D67FB31C8118731390482A4E /* PINCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINCache.h; path = PINCache/PINCache.h; sourceTree = "<group>"; };
+		60DD4645A2AAA9E4180F1F4C84E5CC3F /* CZWeatherHourlyCondition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CZWeatherHourlyCondition.m; path = CZWeatherKit/CZWeatherHourlyCondition.m; sourceTree = "<group>"; };
+		640AFD5F9053D15C3ECEBE6AC0521805 /* CZWeatherService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CZWeatherService.m; path = CZWeatherKit/CZWeatherService.m; sourceTree = "<group>"; };
+		6568C50D8080A2B16163D6219B065C71 /* Pods-RubyMotion-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RubyMotion-acknowledgements.plist"; sourceTree = "<group>"; };
+		668A75B3410CD9FE592027E3C556CDAB /* CZOpenWeatherMapRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CZOpenWeatherMapRequest.h; path = CZWeatherKit/CZOpenWeatherMapRequest.h; sourceTree = "<group>"; };
+		6AC05D35DCFC0968768FEF512F4F1980 /* CZWeatherService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CZWeatherService.h; path = CZWeatherKit/CZWeatherService.h; sourceTree = "<group>"; };
+		6D1B14BDB002F20EF76384A97443F105 /* CZWeatherKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CZWeatherKit-prefix.pch"; sourceTree = "<group>"; };
+		7F942C5C1731C395FD36730A5B7F14B2 /* CZWeatherKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CZWeatherKit-dummy.m"; sourceTree = "<group>"; };
+		80FA7E50EC7D03442FD1131412FE6B38 /* Pods-RubyMotion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RubyMotion.debug.xcconfig"; sourceTree = "<group>"; };
+		822718922338FA6ADB24F9D4DFF0790B /* libPods-RubyMotion.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RubyMotion.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		83EB99F7D283515BB49FDEF77A834669 /* CZWeatherKitTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CZWeatherKitTypes.h; path = CZWeatherKit/CZWeatherKitTypes.h; sourceTree = "<group>"; };
+		86E300100FCB4AD3B0966C9A82D61FB6 /* Pods-RubyMotion-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RubyMotion-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8840F537CDA1D16B701481C730492B9C /* CZWundergroundRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CZWundergroundRequest.m; path = CZWeatherKit/CZWundergroundRequest.m; sourceTree = "<group>"; };
+		88BD3029FFE9ADBCAFEDE737C5482D02 /* PINCache-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PINCache-prefix.pch"; sourceTree = "<group>"; };
+		89E409E1AE32722FE1C345573DF549E6 /* CZWeatherData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CZWeatherData.m; path = CZWeatherKit/CZWeatherData.m; sourceTree = "<group>"; };
+		8D9F6363D8F3A4295F61CC21853C39FF /* PINCacheObjectSubscripting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINCacheObjectSubscripting.h; path = PINCache/PINCacheObjectSubscripting.h; sourceTree = "<group>"; };
+		8E184A7CBDD11C7A10659350AEDCE81F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		8E55E3DDBEA53B7DB4767D3B165C7305 /* CZOpenWeatherMapAPI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CZOpenWeatherMapAPI.m; path = CZWeatherKit/CZOpenWeatherMapAPI.m; sourceTree = "<group>"; };
+		913FC46E60F3A9F8CF6C648AF50B8D3B /* CZForecastioAPI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CZForecastioAPI.m; path = CZWeatherKit/CZForecastioAPI.m; sourceTree = "<group>"; };
+		99D6F9DA1801279217D90923466EB457 /* CZWundergroundRequest+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CZWundergroundRequest+Internal.h"; path = "CZWeatherKit/CZWundergroundRequest+Internal.h"; sourceTree = "<group>"; };
+		9AFCC43A3EB01ED0930B3913889E40CB /* PINDiskCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINDiskCache.h; path = PINCache/PINDiskCache.h; sourceTree = "<group>"; };
+		9F46AC05559AE56B9CB7D0D94F1C69D4 /* PINMemoryCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINMemoryCache.h; path = PINCache/PINMemoryCache.h; sourceTree = "<group>"; };
+		A6DD06146A8117A89901378EBF9DD620 /* CZWeatherCurrentCondition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CZWeatherCurrentCondition.h; path = CZWeatherKit/CZWeatherCurrentCondition.h; sourceTree = "<group>"; };
+		A7D8C8025506C0CB18F2F13E8BC1CC1D /* PINMemoryCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINMemoryCache.m; path = PINCache/PINMemoryCache.m; sourceTree = "<group>"; };
+		A8AFB7642EEABB55537EB869986D1CA9 /* CZWeatherCurrentCondition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CZWeatherCurrentCondition.m; path = CZWeatherKit/CZWeatherCurrentCondition.m; sourceTree = "<group>"; };
+		ABCCB5114B52479C47ACE5E650B60C20 /* CZPINWeatherDataCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CZPINWeatherDataCache.h; path = CZWeatherKit/CZPINWeatherDataCache.h; sourceTree = "<group>"; };
+		ADB93AF4235F1E9125452DFCC25E1AC2 /* NSDictionary+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+Internal.h"; path = "CZWeatherKit/NSDictionary+Internal.h"; sourceTree = "<group>"; };
+		AF2DE20984BC9BCF25266E06A476FC9C /* CZWorldWeatherOnlineAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CZWorldWeatherOnlineAPI.h; path = CZWeatherKit/CZWorldWeatherOnlineAPI.h; sourceTree = "<group>"; };
+		B84119BD16176FE991FCBD69FBD870DD /* Pods-RubyMotion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RubyMotion.release.xcconfig"; sourceTree = "<group>"; };
+		BD2C247332572D43763527D7354B7988 /* NSDictionary+Internal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+Internal.m"; path = "CZWeatherKit/NSDictionary+Internal.m"; sourceTree = "<group>"; };
+		BDDCDE4FE30E45B47E4C73579E38376A /* CZClimacons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CZClimacons.h; path = CZWeatherKit/CZClimacons.h; sourceTree = "<group>"; };
+		C5B0B0B3ED9ACB09C7977DD1BB663639 /* CZWeatherForecastCondition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CZWeatherForecastCondition.h; path = CZWeatherKit/CZWeatherForecastCondition.h; sourceTree = "<group>"; };
+		CBE1FE7FB87DA055BE7673CAD2E0FA52 /* Pods-RubyMotion-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RubyMotion-frameworks.sh"; sourceTree = "<group>"; };
+		CD13C53BE732D178B66401D9F40B998E /* CZPINWeatherDataCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CZPINWeatherDataCache.m; path = CZWeatherKit/CZPINWeatherDataCache.m; sourceTree = "<group>"; };
+		D3309307833823A84BE8F4F618DF4EBC /* CZWeatherDataCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CZWeatherDataCache.h; path = CZWeatherKit/CZWeatherDataCache.h; sourceTree = "<group>"; };
+		D8AFC52E5CEDD1EB2A536D5C2792A0F2 /* CZWeatherData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CZWeatherData.h; path = CZWeatherKit/CZWeatherData.h; sourceTree = "<group>"; };
+		DB29D0367AAA3B11371BDE3086EE8753 /* CZWeatherKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CZWeatherKit.h; path = CZWeatherKit/CZWeatherKit.h; sourceTree = "<group>"; };
+		DE4F611B7E8323BA2EA01C918DB221B3 /* CZWeatherLocation+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CZWeatherLocation+Internal.h"; path = "CZWeatherKit/CZWeatherLocation+Internal.h"; sourceTree = "<group>"; };
+		E7BA4E749E2860088B147DD1786056D3 /* CZOpenWeatherMapRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CZOpenWeatherMapRequest.m; path = CZWeatherKit/CZOpenWeatherMapRequest.m; sourceTree = "<group>"; };
+		E8434C951D711AB2192ABE3A7724FA4C /* CZForecastioRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CZForecastioRequest.m; path = CZWeatherKit/CZForecastioRequest.m; sourceTree = "<group>"; };
+		E937FA03FC659F2325D419FD84B57D31 /* CZWeatherKitInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CZWeatherKitInternal.h; path = CZWeatherKit/CZWeatherKitInternal.h; sourceTree = "<group>"; };
+		EC8291BCF28D65CB6432E29D36DA74B6 /* CZWeatherForecastCondition+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CZWeatherForecastCondition+Internal.h"; path = "CZWeatherKit/CZWeatherForecastCondition+Internal.h"; sourceTree = "<group>"; };
+		F2AF0B5EEA26D43A14855327CB255447 /* CZWorldWeatherOnlineRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CZWorldWeatherOnlineRequest.m; path = CZWeatherKit/CZWorldWeatherOnlineRequest.m; sourceTree = "<group>"; };
+		F2CA0CDA41291EF0595635A5A0EC7915 /* CZWeatherLocation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CZWeatherLocation.h; path = CZWeatherKit/CZWeatherLocation.h; sourceTree = "<group>"; };
+		FF2C0A9E0675A6FA553CA11F1E1C7B8B /* CZForecastioAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CZForecastioAPI.h; path = CZWeatherKit/CZForecastioAPI.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8047F4EC5D13C8BAC0C969FA29DC9443 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				088D263366E5E864D6D65A5803494D68 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B74B7E61A96FB57DB9AC4F33BE71E621 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				804FF89FE25EFC48AFE6A9DC11353638 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF6D5EE6366D4564C0206B1792EE300B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8141D84C2B46D8B5EE0EBE96D7808F53 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F80DA503E6CA4A028C95463BB1A4C8B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A9B858984587526AB4E7228F66EA19B /* CZWeatherKit */,
+				C9D02366F98EA5C353DE521007BB6B5E /* PINCache */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5592895704EB4374616458E8B5AFA719 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				34D604C76EF27B236B1E843D954E9BAC /* PINCache.xcconfig */,
+				5AD19BD657A0BCBB779A887B442B1A24 /* PINCache-dummy.m */,
+				88BD3029FFE9ADBCAFEDE737C5482D02 /* PINCache-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PINCache";
+			sourceTree = "<group>";
+		};
+		5E3991177E8374FD9945B0AA5F1C1FC9 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7B6285C98423323C96A0AA35FD86449D /* Pods-RubyMotion */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7A9B858984587526AB4E7228F66EA19B /* CZWeatherKit */ = {
+			isa = PBXGroup;
+			children = (
+				BDDCDE4FE30E45B47E4C73579E38376A /* CZClimacons.h */,
+				FF2C0A9E0675A6FA553CA11F1E1C7B8B /* CZForecastioAPI.h */,
+				913FC46E60F3A9F8CF6C648AF50B8D3B /* CZForecastioAPI.m */,
+				3F9BFE4415C05EBD603751C1BEE20B52 /* CZForecastioRequest.h */,
+				E8434C951D711AB2192ABE3A7724FA4C /* CZForecastioRequest.m */,
+				29378B060E31BEBF9224F0A4974EEA8B /* CZForecastioRequest+Internal.h */,
+				0468A9A6A7B65BCFB83A5EA55FC1FE3F /* CZOpenWeatherMapAPI.h */,
+				8E55E3DDBEA53B7DB4767D3B165C7305 /* CZOpenWeatherMapAPI.m */,
+				668A75B3410CD9FE592027E3C556CDAB /* CZOpenWeatherMapRequest.h */,
+				E7BA4E749E2860088B147DD1786056D3 /* CZOpenWeatherMapRequest.m */,
+				15BF3DE89F19622E7FEE4451576D2685 /* CZOpenWeatherMapRequest+Internal.h */,
+				ABCCB5114B52479C47ACE5E650B60C20 /* CZPINWeatherDataCache.h */,
+				CD13C53BE732D178B66401D9F40B998E /* CZPINWeatherDataCache.m */,
+				3A5850E9A30B257C45C7DEB5E3537E08 /* CZWeatherAPI.h */,
+				A6DD06146A8117A89901378EBF9DD620 /* CZWeatherCurrentCondition.h */,
+				A8AFB7642EEABB55537EB869986D1CA9 /* CZWeatherCurrentCondition.m */,
+				53BF0027438C6B8868E9982230E013C6 /* CZWeatherCurrentCondition+Internal.h */,
+				D8AFC52E5CEDD1EB2A536D5C2792A0F2 /* CZWeatherData.h */,
+				89E409E1AE32722FE1C345573DF549E6 /* CZWeatherData.m */,
+				195BC67EC988F089B70D0E45D9E3AE2F /* CZWeatherData+Internal.h */,
+				D3309307833823A84BE8F4F618DF4EBC /* CZWeatherDataCache.h */,
+				C5B0B0B3ED9ACB09C7977DD1BB663639 /* CZWeatherForecastCondition.h */,
+				1AA5ECF1247EA2CC0AC5D45BD2D979A8 /* CZWeatherForecastCondition.m */,
+				EC8291BCF28D65CB6432E29D36DA74B6 /* CZWeatherForecastCondition+Internal.h */,
+				001E3F83B2E71D99EDCD54D765A22BB8 /* CZWeatherHourlyCondition.h */,
+				60DD4645A2AAA9E4180F1F4C84E5CC3F /* CZWeatherHourlyCondition.m */,
+				50E75E172D7E59FD470E496E05527D6C /* CZWeatherHourlyCondition+Internal.h */,
+				DB29D0367AAA3B11371BDE3086EE8753 /* CZWeatherKit.h */,
+				E937FA03FC659F2325D419FD84B57D31 /* CZWeatherKitInternal.h */,
+				83EB99F7D283515BB49FDEF77A834669 /* CZWeatherKitTypes.h */,
+				F2CA0CDA41291EF0595635A5A0EC7915 /* CZWeatherLocation.h */,
+				066DBBE310CBF8BBFB61624C30210604 /* CZWeatherLocation.m */,
+				DE4F611B7E8323BA2EA01C918DB221B3 /* CZWeatherLocation+Internal.h */,
+				2A9A0B4E9E2FC10DA811DB68358A64FD /* CZWeatherRequest.h */,
+				13779100A11912DA020899BA678592AE /* CZWeatherRequest.m */,
+				12BB8F57E025A0172751954EAE814B6F /* CZWeatherRequest+Internal.h */,
+				6AC05D35DCFC0968768FEF512F4F1980 /* CZWeatherService.h */,
+				640AFD5F9053D15C3ECEBE6AC0521805 /* CZWeatherService.m */,
+				01254C30869056D7E5D02884DCF3CA31 /* CZWeatherService+Internal.h */,
+				AF2DE20984BC9BCF25266E06A476FC9C /* CZWorldWeatherOnlineAPI.h */,
+				22CF3BB94DAED66A739F45DCA375F4DE /* CZWorldWeatherOnlineAPI.m */,
+				04A4457379B3C78C474F1057C0CCB60C /* CZWorldWeatherOnlineRequest.h */,
+				F2AF0B5EEA26D43A14855327CB255447 /* CZWorldWeatherOnlineRequest.m */,
+				3D96F94C09F6B908336B122127521034 /* CZWundergroundAPI.h */,
+				0520366A18A2778D6B3754380370F6FA /* CZWundergroundAPI.m */,
+				0E45F6E19C5B7BBC23603E7483FACD99 /* CZWundergroundRequest.h */,
+				8840F537CDA1D16B701481C730492B9C /* CZWundergroundRequest.m */,
+				99D6F9DA1801279217D90923466EB457 /* CZWundergroundRequest+Internal.h */,
+				ADB93AF4235F1E9125452DFCC25E1AC2 /* NSDictionary+Internal.h */,
+				BD2C247332572D43763527D7354B7988 /* NSDictionary+Internal.m */,
+				9DA30324F9876CE759A3CC17C288E93D /* Support Files */,
+			);
+			path = CZWeatherKit;
+			sourceTree = "<group>";
+		};
+		7B6285C98423323C96A0AA35FD86449D /* Pods-RubyMotion */ = {
+			isa = PBXGroup;
+			children = (
+				86E300100FCB4AD3B0966C9A82D61FB6 /* Pods-RubyMotion-acknowledgements.markdown */,
+				6568C50D8080A2B16163D6219B065C71 /* Pods-RubyMotion-acknowledgements.plist */,
+				5A15BA2A940560D2A0C77A15B20151A9 /* Pods-RubyMotion-dummy.m */,
+				CBE1FE7FB87DA055BE7673CAD2E0FA52 /* Pods-RubyMotion-frameworks.sh */,
+				0DC2C64A19F0947D88E73341E259375A /* Pods-RubyMotion-resources.sh */,
+				80FA7E50EC7D03442FD1131412FE6B38 /* Pods-RubyMotion.debug.xcconfig */,
+				B84119BD16176FE991FCBD69FBD870DD /* Pods-RubyMotion.release.xcconfig */,
+			);
+			name = "Pods-RubyMotion";
+			path = "Target Support Files/Pods-RubyMotion";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BB99B8D4C7329D10E7E4451B0A72C15A /* Frameworks */,
+				0F80DA503E6CA4A028C95463BB1A4C8B /* Pods */,
+				DA5C837F8248B32F7745578009A7BCE4 /* Products */,
+				5E3991177E8374FD9945B0AA5F1C1FC9 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9DA30324F9876CE759A3CC17C288E93D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				353814CD0A61DB8C4F5669462C367207 /* CZWeatherKit.xcconfig */,
+				7F942C5C1731C395FD36730A5B7F14B2 /* CZWeatherKit-dummy.m */,
+				6D1B14BDB002F20EF76384A97443F105 /* CZWeatherKit-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CZWeatherKit";
+			sourceTree = "<group>";
+		};
+		BB99B8D4C7329D10E7E4451B0A72C15A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CDDF067583365F4DC4C3532BD6D66E2B /* tvOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9D02366F98EA5C353DE521007BB6B5E /* PINCache */ = {
+			isa = PBXGroup;
+			children = (
+				25FAF9A0D08FE5B64F52E26F8A30B4F5 /* Nullability.h */,
+				605EA5C6D67FB31C8118731390482A4E /* PINCache.h */,
+				1706D8636AF0E606AD852688E755A77E /* PINCache.m */,
+				8D9F6363D8F3A4295F61CC21853C39FF /* PINCacheObjectSubscripting.h */,
+				9AFCC43A3EB01ED0930B3913889E40CB /* PINDiskCache.h */,
+				5FF0F9DCAC09DD3852450AF973D96372 /* PINDiskCache.m */,
+				9F46AC05559AE56B9CB7D0D94F1C69D4 /* PINMemoryCache.h */,
+				A7D8C8025506C0CB18F2F13E8BC1CC1D /* PINMemoryCache.m */,
+				5592895704EB4374616458E8B5AFA719 /* Support Files */,
+			);
+			path = PINCache;
+			sourceTree = "<group>";
+		};
+		CDDF067583365F4DC4C3532BD6D66E2B /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				8E184A7CBDD11C7A10659350AEDCE81F /* Foundation.framework */,
+			);
+			name = tvOS;
+			sourceTree = "<group>";
+		};
+		DA5C837F8248B32F7745578009A7BCE4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00CF9EECD78AB847EC061F8848839B84 /* libCZWeatherKit.a */,
+				5289E3D48AF008CA7240ADB55C477E01 /* libPINCache.a */,
+				822718922338FA6ADB24F9D4DFF0790B /* libPods-RubyMotion.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		496C89CBE7E28E4054C260B51CA9BD15 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7A551E76CE7E1A155C74A2E43DD57E3 /* Nullability.h in Headers */,
+				724F5BC1F675F577D5195312B148E5FB /* PINCache.h in Headers */,
+				E3E4C4B7132C6E522DCB338BA18CC715 /* PINCacheObjectSubscripting.h in Headers */,
+				C562C8F557D76DE8137096B8AD416EB4 /* PINDiskCache.h in Headers */,
+				F47CE01ECC6E124C262986212F9CF72C /* PINMemoryCache.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAE2DB646C9E79319224D0FFC7691963 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5907299E1219DAAA4BED0E0B333B0FA /* CZClimacons.h in Headers */,
+				9E7A1C5FCA0E69A5AF44AAC36C19E775 /* CZForecastioAPI.h in Headers */,
+				7189CB9AED00E48445AAEA13927CCC36 /* CZForecastioRequest+Internal.h in Headers */,
+				D7F96C2E2EA64961BEEFB9D6EEDEE005 /* CZForecastioRequest.h in Headers */,
+				DF9B2DE4DF55EB33829727816E1215F8 /* CZOpenWeatherMapAPI.h in Headers */,
+				F7C0E307037F6D7A15AD65BCB3988EA4 /* CZOpenWeatherMapRequest+Internal.h in Headers */,
+				4A90657DEE765D875E148ABA338CAC81 /* CZOpenWeatherMapRequest.h in Headers */,
+				B30142E9145D05D263F005CBAE7C51D7 /* CZPINWeatherDataCache.h in Headers */,
+				92E9E30013A54774CB8915B73D0FC3E9 /* CZWeatherAPI.h in Headers */,
+				D62DF6CA7BA59182B9557536D124D011 /* CZWeatherCurrentCondition+Internal.h in Headers */,
+				1FD2A8833EB3BB67AC6B2676EA2452EC /* CZWeatherCurrentCondition.h in Headers */,
+				EBA1DDF781FABA58FDDA8AAB64E405B5 /* CZWeatherData+Internal.h in Headers */,
+				6085EC3E002F99C352234CB41A1FB1BF /* CZWeatherData.h in Headers */,
+				8016AE6CA1015B794CB30BD4710273D1 /* CZWeatherDataCache.h in Headers */,
+				F5B6402A271559C0B0E35E0A1306B99C /* CZWeatherForecastCondition+Internal.h in Headers */,
+				1121A9AB3F6F51A85924FAAA93B5E9BF /* CZWeatherForecastCondition.h in Headers */,
+				A67E930555C03C8003A4265B9F891BDC /* CZWeatherHourlyCondition+Internal.h in Headers */,
+				1083EF2F1E252DA9A137A6FC87873861 /* CZWeatherHourlyCondition.h in Headers */,
+				2CA4EDB4C7D5D7208A891D4FEC9D7EA8 /* CZWeatherKit.h in Headers */,
+				B01A8902E6CFEC5402A62CC3C85CCDB5 /* CZWeatherKitInternal.h in Headers */,
+				621A991E790C6D1AE838F0AB9A56A66C /* CZWeatherKitTypes.h in Headers */,
+				49A0E68D9D64022E451A3216DA3BB9B2 /* CZWeatherLocation+Internal.h in Headers */,
+				3AA8F1A483065ABBB29193EF7B7FBC6D /* CZWeatherLocation.h in Headers */,
+				4294EEFAC8F6A20EDB0857B910CD5343 /* CZWeatherRequest+Internal.h in Headers */,
+				F1EC287F7E08331953D13B9986870322 /* CZWeatherRequest.h in Headers */,
+				DEC45D00112B20799EBCCE2396031B90 /* CZWeatherService+Internal.h in Headers */,
+				C63BCD4FACEAF59444A3D43E706AFD02 /* CZWeatherService.h in Headers */,
+				B459084F9506800E7D820ADC959ED72E /* CZWorldWeatherOnlineAPI.h in Headers */,
+				78421029E54D49AF8D85CC72BDD5DB4D /* CZWorldWeatherOnlineRequest.h in Headers */,
+				94620B07E33F68047E26CAE20DFFA69B /* CZWundergroundAPI.h in Headers */,
+				A81B804573B65513A0C2B5A8C6FF8C3D /* CZWundergroundRequest+Internal.h in Headers */,
+				3472EF9BD805C07EC5A6D27AF818FBAF /* CZWundergroundRequest.h in Headers */,
+				9E063E75E49148256D914BAD243E21BC /* NSDictionary+Internal.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0F777AA9C0C6BAB44360264257938FD3 /* Pods-RubyMotion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56DA62EC85C5BF89DCE8BD829813D94A /* Build configuration list for PBXNativeTarget "Pods-RubyMotion" */;
+			buildPhases = (
+				A8C365F923CF10CAA90BB696F1F6BCF9 /* Sources */,
+				CF6D5EE6366D4564C0206B1792EE300B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4EE3E0EB5E88C6CE515DE727E0C9F872 /* PBXTargetDependency */,
+				5FFEB2FB155A21660E229CFD3B4B0825 /* PBXTargetDependency */,
+			);
+			name = "Pods-RubyMotion";
+			productName = "Pods-RubyMotion";
+			productReference = 822718922338FA6ADB24F9D4DFF0790B /* libPods-RubyMotion.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		3C2F6CA7BB9025BD209F02DE8B6579D4 /* PINCache */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C73C374773212C07C686B2206ED0E7B /* Build configuration list for PBXNativeTarget "PINCache" */;
+			buildPhases = (
+				AE86B7EA238B4275E3B70743652EDF03 /* Sources */,
+				8047F4EC5D13C8BAC0C969FA29DC9443 /* Frameworks */,
+				496C89CBE7E28E4054C260B51CA9BD15 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PINCache;
+			productName = PINCache;
+			productReference = 5289E3D48AF008CA7240ADB55C477E01 /* libPINCache.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		49B8CD724225AA712A67BF31E74741A6 /* CZWeatherKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4382B14CA9266A6D964BA3640D4116BA /* Build configuration list for PBXNativeTarget "CZWeatherKit" */;
+			buildPhases = (
+				7861608D9E375083B22A25CFD0BF3CAF /* Sources */,
+				B74B7E61A96FB57DB9AC4F33BE71E621 /* Frameworks */,
+				EAE2DB646C9E79319224D0FFC7691963 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E05AF33E1E03D4A2FA39E4DF26192B20 /* PBXTargetDependency */,
+			);
+			name = CZWeatherKit;
+			productName = CZWeatherKit;
+			productReference = 00CF9EECD78AB847EC061F8848839B84 /* libCZWeatherKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = DA5C837F8248B32F7745578009A7BCE4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				49B8CD724225AA712A67BF31E74741A6 /* CZWeatherKit */,
+				3C2F6CA7BB9025BD209F02DE8B6579D4 /* PINCache */,
+				0F777AA9C0C6BAB44360264257938FD3 /* Pods-RubyMotion */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7861608D9E375083B22A25CFD0BF3CAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC258D80FBEFD8E7C0482DBDCA1E35D2 /* CZForecastioAPI.m in Sources */,
+				8EA0143DB46491C7703DDD09C40F3CE3 /* CZForecastioRequest.m in Sources */,
+				7D8735D0BDA330018531B25128B7766D /* CZOpenWeatherMapAPI.m in Sources */,
+				D5633D956C98ADDE0D5662EC517303E9 /* CZOpenWeatherMapRequest.m in Sources */,
+				D062D96BF407A6C8C1E3E7147C2C2883 /* CZPINWeatherDataCache.m in Sources */,
+				6D486F573527C83C6AADEA13C89793D9 /* CZWeatherCurrentCondition.m in Sources */,
+				0FBFC0CC17782771FFD26933FF15737F /* CZWeatherData.m in Sources */,
+				D1CC57DAACF988E4BDE3AF64A80C667A /* CZWeatherForecastCondition.m in Sources */,
+				D38067B64F12CD43C196023CBBE01CCB /* CZWeatherHourlyCondition.m in Sources */,
+				D1CEC3E47877B4286F17C4F8AD2C08D0 /* CZWeatherKit-dummy.m in Sources */,
+				D43083C49FB47C4B7130B28EAECC6B74 /* CZWeatherLocation.m in Sources */,
+				B4036F61F1FD4D1DD778DA4F34C6E6B6 /* CZWeatherRequest.m in Sources */,
+				9D1C472B7D64DABFF5DA56FCF9ED1092 /* CZWeatherService.m in Sources */,
+				001FE4F3A3575292E8523D69B1064697 /* CZWorldWeatherOnlineAPI.m in Sources */,
+				9FCCFBA91FBD00561DE4B8A0C84C00A3 /* CZWorldWeatherOnlineRequest.m in Sources */,
+				48B2A1BE4DFDB185DD7DAC803563FE8F /* CZWundergroundAPI.m in Sources */,
+				EDB74A3E4301C5429037FFA007DCFE07 /* CZWundergroundRequest.m in Sources */,
+				B764840D47737DEF248BEA94FE3F8EF0 /* NSDictionary+Internal.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8C365F923CF10CAA90BB696F1F6BCF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26863CB384FF0F7E0D0FC402E0E0D4C9 /* Pods-RubyMotion-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE86B7EA238B4275E3B70743652EDF03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA9B8FAADCE7E3764AB2B8870FB0AE19 /* PINCache-dummy.m in Sources */,
+				8EED894CF411CC96DE5014438E3F8690 /* PINCache.m in Sources */,
+				C2C017F2F6DC7343F1000649ECE14928 /* PINDiskCache.m in Sources */,
+				348D7A503B97BA95108A4CD0321EBD1D /* PINMemoryCache.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4EE3E0EB5E88C6CE515DE727E0C9F872 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CZWeatherKit;
+			target = 49B8CD724225AA712A67BF31E74741A6 /* CZWeatherKit */;
+			targetProxy = AAFC6E5F843E4046E2B9E79948A2C837 /* PBXContainerItemProxy */;
+		};
+		5FFEB2FB155A21660E229CFD3B4B0825 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINCache;
+			target = 3C2F6CA7BB9025BD209F02DE8B6579D4 /* PINCache */;
+			targetProxy = 5727528D4E043FCA22C3BB97C08B0B97 /* PBXContainerItemProxy */;
+		};
+		E05AF33E1E03D4A2FA39E4DF26192B20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINCache;
+			target = 3C2F6CA7BB9025BD209F02DE8B6579D4 /* PINCache */;
+			targetProxy = 0ED9302F94BF4DE37BED1A6BAD00C241 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0835C129789D4167CC212F63F992A7CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 353814CD0A61DB8C4F5669462C367207 /* CZWeatherKit.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CZWeatherKit/CZWeatherKit-prefix.pch";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		127B0553742519E23100E12F448D7B84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1F6327B436DFC0C8F2E303FA10960114 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34D604C76EF27B236B1E843D954E9BAC /* PINCache.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PINCache/PINCache-prefix.pch";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		5BA1D3775826187337FB7D0F220E3ECE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		9A655BE158237A6A207E9979E3FFF892 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80FA7E50EC7D03442FD1131412FE6B38 /* Pods-RubyMotion.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		A83F4FD543F828A4D615A9D7469E0BED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 353814CD0A61DB8C4F5669462C367207 /* CZWeatherKit.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CZWeatherKit/CZWeatherKit-prefix.pch";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		DEC1ADADDDCCBC365B0E9D49BCF31FDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B84119BD16176FE991FCBD69FBD870DD /* Pods-RubyMotion.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		F1BFE6FB8C1FAB9E0D9929D8E5E64D14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34D604C76EF27B236B1E843D954E9BAC /* PINCache.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PINCache/PINCache-prefix.pch";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BA1D3775826187337FB7D0F220E3ECE /* Debug */,
+				127B0553742519E23100E12F448D7B84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4382B14CA9266A6D964BA3640D4116BA /* Build configuration list for PBXNativeTarget "CZWeatherKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A83F4FD543F828A4D615A9D7469E0BED /* Debug */,
+				0835C129789D4167CC212F63F992A7CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		56DA62EC85C5BF89DCE8BD829813D94A /* Build configuration list for PBXNativeTarget "Pods-RubyMotion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A655BE158237A6A207E9979E3FFF892 /* Debug */,
+				DEC1ADADDDCCBC365B0E9D49BCF31FDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C73C374773212C07C686B2206ED0E7B /* Build configuration list for PBXNativeTarget "PINCache" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1BFE6FB8C1FAB9E0D9929D8E5E64D14 /* Debug */,
+				1F6327B436DFC0C8F2E303FA10960114 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
