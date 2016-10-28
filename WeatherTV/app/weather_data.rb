@@ -1,9 +1,12 @@
 class WeatherData
-  def self.shared
-    Dispatch.once do
-      @instance ||= new
-    end
-    @instance
+  attr_accessor :temperature
+  attr_accessor :summary
+  attr_accessor :icon
+
+  def initialize(current)
+    self.summary = current.summary
+    self.temperature = current.temperature
+    self.icon = current.climacon.chr # Coming in as Fixnum, but it's a char
   end
 
   def self.load
@@ -12,7 +15,7 @@ class WeatherData
     BW::JSON.parse(NSData.dataWithContentsOfFile(path))
   end
 
-  def locations
+  def self.locations
     @locations ||= WeatherData.load
   end
 end

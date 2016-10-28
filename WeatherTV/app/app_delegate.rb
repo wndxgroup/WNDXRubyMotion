@@ -1,11 +1,10 @@
 class AppDelegate < PM::Delegate
   def on_load(app, options)
-    locations = []
-    WeatherData.shared.locations.each do |location|
-      locations << WeatherScreen.new.tap do |screen|
-        screen.title = location[:name]
+    tabs = WeatherData.locations.inject([]) do |tabs, location|
+      tabs << WeatherScreen.new.tap do |screen|
+        screen.location = location
       end
     end
-    open_tab_bar *locations
+    open_tab_bar *tabs
   end
 end

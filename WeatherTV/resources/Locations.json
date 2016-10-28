@@ -1,4 +1,4 @@
 [
-  {"name": "Calgary", "lat":51.0486, "long":114.0708},
-  {"name": "Lethbridge", "lat":49.6935, "long":112.8418}
+  {"name": "Calgary", "lat":51.0486, "long":-114.0708},
+  {"name": "Lethbridge", "lat":49.6935, "long":-112.8418}
 ]

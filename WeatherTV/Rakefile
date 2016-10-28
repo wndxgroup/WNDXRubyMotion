@@ -11,7 +11,8 @@ end
 Motion::Project::App.setup do |app|
   # Use `rake config' to see complete project settings.
   app.name = 'WeatherTV'
-
+  app.fonts = ['Climacons.ttf']
+  app.frameworks += %w(CoreLocation)
   app.pods do
     pod 'CZWeatherKit'
   end
