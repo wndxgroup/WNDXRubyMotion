@@ -1,4 +1,4 @@
-class ActivityRow< UI::ListRow
+class ActivityRow < UI::ListRow
   attr_accessor :title_label
 
   def initialize
