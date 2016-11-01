@@ -1,0 +1,15 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    motion-flow (0.1.8)
+    rake (11.3.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  motion-flow
+  rake
+
+BUNDLED WITH
+   1.13.6
