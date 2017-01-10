@@ -2,6 +2,7 @@ class CustomNavigationBar < UINavigationBar
 
   def initWithFrame(frame)
     super.tap do |bar|
+      layer.addSublayer(highlight_layer)
       bar.addSubview(title_label)
       bar.barTintColor = UIColor.blackColor
     end
@@ -10,17 +11,17 @@ class CustomNavigationBar < UINavigationBar
   def layoutSubviews
     super
     title_width = 130.0
-    # border_height = 4.0
+    border_height = 4.0
 
-    # let path = UIBezierPath()
-    # path.move(to: .zero)
-    # path.addLine(to: CGPoint(x: titleWidth, y: 0))
-    # path.addLine(to: CGPoint(x: titleWidth, y: bounds.height - borderHeight))
-    # path.addLine(to: CGPoint(x: bounds.width, y: bounds.height - borderHeight))
-    # path.addLine(to: CGPoint(x: bounds.width, y: bounds.height))
-    # path.addLine(to: CGPoint(x: 0, y: bounds.height))
-    # path.close()
-    # highlightLayer.path = path.cgPath
+    path = UIBezierPath.bezierPath
+    path.moveToPoint(CGPointZero)
+    path.addLineToPoint(CGPointMake(title_width, 0))
+    path.addLineToPoint(CGPointMake(title_width, bounds.size.height - border_height))
+    path.addLineToPoint(CGPointMake(bounds.size.width, bounds.size.height - border_height))
+    path.addLineToPoint(CGPointMake(bounds.size.width, bounds.size.height))
+    path.addLineToPoint(CGPointMake(0, bounds.size.height))
+    path.closePath
+    highlight_layer.path = path.CGPath
 
     title_label.frame = CGRectMake(0, 0, title_width, bounds.size.height)
     # statusLabel.frame = CGRect(
@@ -30,6 +31,12 @@ class CustomNavigationBar < UINavigationBar
     #   height: statusLabel.bounds.height
     # )
     # statusIndicator.position = CGPoint(x: statusLabel.center.x - 50, y: statusLabel.center.y - 1)
+  end
+
+  def highlight_layer
+    @highlight_layer ||= CAShapeLayer.new.tap do |layer|
+      layer.fillColor = UIColor.colorWithRed(0.46, green:0.53, blue:0.62, alpha:1.0).CGColor
+    end
   end
 
   def title_label
