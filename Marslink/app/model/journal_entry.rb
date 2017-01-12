@@ -27,4 +27,13 @@ class JournalEntry < NSObject
     self.text = text
     self.user = user
   end
+
+  def diffIdentifier
+    self.__id__
+  end
+
+  def isEqualToDiffableObject(object)
+    object.is_a?(JournalEntry) &&
+        (self.date = object.date && self.text == object.text)
+  end
 end

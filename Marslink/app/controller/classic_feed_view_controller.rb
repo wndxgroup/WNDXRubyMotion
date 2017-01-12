@@ -70,7 +70,7 @@ class ClassicFeedViewController < UIViewController
     cell = collection_view.dequeueReusableCellWithReuseIdentifier(identifier, forIndexPath: index_path)
     entry = loader.entries[index_path.section]
     if cell.instance_of? JournalEntryDateCell
-      cell.label.text = "SOL (#{sol_formatter.sols(entry.date)})"
+      cell.label.text = "SOL #{sol_formatter.sols(entry.date)}"
     elsif cell.instance_of? JournalEntryCell
       cell.label.text = entry.text
     end

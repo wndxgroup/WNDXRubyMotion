@@ -26,7 +26,7 @@ class AppDelegate
     rootViewController.view.backgroundColor = UIColor.blackColor
 
     navigationController = UINavigationController.alloc.initWithNavigationBarClass(CustomNavigationBar.self, toolbarClass: nil)
-    navigationController.pushViewController(ClassicFeedViewController.new, animated: false)
+    navigationController.pushViewController(FeedViewController.new, animated: false)
 
     @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
     @window.rootViewController = navigationController
