@@ -1,6 +1,7 @@
 class CustomNavigationBar < UINavigationBar
 
   def initWithFrame(frame)
+    super
     @status_on = false
     super.tap do |bar|
       layer.addSublayer(highlight_layer)
