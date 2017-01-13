@@ -35,7 +35,7 @@ class Pathfinder
   private
   def lewis_message(text, interval = 0)
     user = User.new(2, "cpt.lewis")
-    Message.new(Time.now - interval, text, user)
+    Message.new(Time.now + interval, text, user)
   end
 
 end

@@ -32,19 +32,24 @@ class FeedViewController < UIViewController
     @collection_view.frame = view.bounds
   end
 
-  def objectsForListAdapter(adapter)
-    pathfinder.messages + loader.entries
+  def objectsForListAdapter(_)
+    (loader.entries +
+        pathfinder.messages +
+          [WxScanner.current_weather]
+    ).sort_by! {|entry| entry.date}.reverse
   end
 
-  def listAdapter(adapter, sectionControllerForObject: object)
+  def listAdapter(_, sectionControllerForObject: object)
     if object.is_a?(Message)
       MessageSectionController.new
+    elsif object.is_a?(Weather)
+      WeatherSectionController.new
     else
       JournalSectionController.new
     end
   end
 
-  def emptyViewForListAdapter(adapter)
+  def emptyViewForListAdapter(_)
     nil
   end
 end
