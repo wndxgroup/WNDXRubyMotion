@@ -3,6 +3,10 @@ class FeedViewController < UIViewController
     JournalEntryLoader.shared
   end
 
+  def pathfinder
+    Pathfinder.shared
+  end
+
   def create_collection_view
     @collection_view = IGListCollectionView.alloc.initWithFrame(CGRectZero, collectionViewLayout: UICollectionViewFlowLayout.new).tap do |view|
       view.backgroundColor = UIColor.blackColor
@@ -29,11 +33,15 @@ class FeedViewController < UIViewController
   end
 
   def objectsForListAdapter(adapter)
-    loader.entries
+    pathfinder.messages + loader.entries
   end
 
-  def listAdapter(adapter, sectionControllerForObject: section_controller)
-    JournalSectionController.new
+  def listAdapter(adapter, sectionControllerForObject: object)
+    if object.is_a?(Message)
+      MessageSectionController.new
+    else
+      JournalSectionController.new
+    end
   end
 
   def emptyViewForListAdapter(adapter)
