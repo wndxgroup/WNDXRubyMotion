@@ -25,6 +25,8 @@ class FeedViewController < UIViewController
     view.addSubview(@collection_view)
     @adapter.collectionView = @collection_view
     @adapter.dataSource = self
+    pathfinder.delegate = self
+    pathfinder.connect
   end
 
   def viewDidLayoutSubviews
@@ -51,5 +53,9 @@ class FeedViewController < UIViewController
 
   def emptyViewForListAdapter(_)
     nil
+  end
+
+  def pathfinderDidUpdateMessages(_)
+    @adapter.performUpdatesAnimated(true, completion: nil)
   end
 end

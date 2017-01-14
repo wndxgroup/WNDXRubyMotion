@@ -1,4 +1,5 @@
 class Pathfinder
+  include BW::KVO
   attr_accessor :messages
   attr_accessor :delegate
 
@@ -12,21 +13,29 @@ class Pathfinder
   def initialize
     self.messages = []
     load_messages
+    observe(self, :messages) do |_, _|
+      delegate.pathfinderDidUpdateMessages(self)
+    end
   end
 
   def load_messages
-    self.messages << lewis_message("Mark, are you receiving me?", -803200)
-    self.messages << lewis_message("I think I left behind some ABBA, might help with the drive 😜", -259200)
-    delegate.pathfinderDidUpdateMessages(self) unless delegate.nil?
+    add_message(lewis_message("Mark, are you receiving me?", -803200))
+    add_message(lewis_message("I think I left behind some ABBA, might help with the drive 😜", -259200))
+  end
+
+  def add_message(message)
+    self.willChangeValueForKey(:messages)
+    self.messages << message
+    self.didChangeValueForKey(:messages)
   end
 
   def connect
-    Dispatch::Queue.after(2.3) do
-      self.messages << lewis_message("Liftoff in 3...")
-      Dispatch::Queue.after(1.0) do
-        self.messages << lewis_message("2...")
-        Dispatch::Queue.after(1.0) do
-          self.messages << lewis_message("1...")
+    Dispatch::Queue.main.after(2.3) do
+      add_message(lewis_message("Liftoff in 3..."))
+      Dispatch::Queue.main.after(1.0) do
+        add_message(lewis_message("2..."))
+        Dispatch::Queue.main.after(1.0) do
+          add_message(lewis_message("1..."))
         end
       end
     end
@@ -37,5 +46,4 @@ class Pathfinder
     user = User.new(2, "cpt.lewis")
     Message.new(Time.now + interval, text, user)
   end
-
 end

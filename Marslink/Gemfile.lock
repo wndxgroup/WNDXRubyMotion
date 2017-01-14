@@ -8,6 +8,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    bubble-wrap (1.9.6)
     claide (1.0.1)
     cocoapods (1.1.1)
       activesupport (>= 4.0.2, < 5)
@@ -70,6 +71,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bubble-wrap
   motion-cocoapods
   rake
 
