@@ -27,13 +27,13 @@ class JournalEntryDateCell < UICollectionViewCell
     self.label = UILabel.new.tap do |label|
       label.backgroundColor = UIColor.clearColor
       label.font = Theme::Base.app_font(14)
-      label.textColor = UIColor.colorWithRed(0.26, green:0.78, blue:0.29, alpha:1.0)
+      label.textColor = "#42c84b".to_color
     end
   end
 
   def initWithFrame(frame)
     super
-    contentView.backgroundColor = UIColor.colorWithRed(0.05, green: 0.12, blue: 0.25, alpha: 1.0)
+    contentView.backgroundColor = "#0c1f3f".to_color
     contentView.addSubview(create_label)
     self
   end

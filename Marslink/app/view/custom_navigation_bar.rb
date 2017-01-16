@@ -31,7 +31,7 @@ class CustomNavigationBar < UINavigationBar
       bar.addSubview(title_label)
       bar.addSubview(status_label)
       bar.barTintColor = UIColor.blackColor
-      NSTimer.scheduledTimerWithTimeInterval(0.6, target: self, selector: :update_status, userInfo: nil, repeats: true)
+      self.update_status
     end
   end
 
@@ -66,11 +66,12 @@ class CustomNavigationBar < UINavigationBar
     CATransaction.setValue(KCFBooleanTrue, forKey: KCATransactionDisableActions)
     status_indicator.fillColor = (@status_on ? UIColor.whiteColor : UIColor.blackColor).CGColor
     CATransaction.commit
+    Dispatch::Queue.main.after(0.6) { self.update_status }
   end
 
   def highlight_layer
     @highlight_layer ||= CAShapeLayer.new.tap do |layer|
-      layer.fillColor = UIColor.colorWithRed(0.46, green:0.53, blue:0.62, alpha:1.0).CGColor
+      layer.fillColor = "#76879D".to_color.CGColor
     end
   end
 
@@ -92,7 +93,7 @@ class CustomNavigationBar < UINavigationBar
       label.text = "RECEIVING"
       label.font = Theme::Base.app_font(13)
       label.textAlignment = NSTextAlignmentCenter
-      label.textColor = UIColor.colorWithRed(0.26, green:0.78, blue:0.29, alpha:1.0)
+      label.textColor = "#42c84b".to_color
       label.sizeToFit
     end
   end

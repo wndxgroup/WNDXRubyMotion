@@ -46,7 +46,7 @@ class JournalEntryCell < UICollectionViewCell
 
   def initWithFrame(frame)
     super
-    contentView.backgroundColor = UIColor.colorWithRed(0.05, green: 0.12, blue: 0.25, alpha: 1.0)
+    contentView.backgroundColor = "#0c1f3f".to_color
     contentView.addSubview(create_label)
     self
   end
