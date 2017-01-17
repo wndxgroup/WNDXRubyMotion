@@ -12,6 +12,7 @@ Motion::Project::App.setup do |app|
   # Use `rake config' to see complete project settings.
   app.name = 'Marslink'
   app.info_plist['UIAppFonts'] = ['OCRAStd.otf']
+  app.icons = %w(Icon-App-29x29 Icon-App-40x40 Icon-App-60x60)
   app.pods do
     pod 'IGListKit'
   end
