@@ -22,7 +22,7 @@
 #
 class AppDelegate
   def application(application, didFinishLaunchingWithOptions:launchOptions)
-    rootViewController = UIViewController.alloc.init
+    rootViewController = UIViewController.new
     rootViewController.title = 'Marslink'
     rootViewController.view.backgroundColor = UIColor.blackColor
 

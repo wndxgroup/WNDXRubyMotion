@@ -64,13 +64,7 @@ class FeedViewController < UIViewController
   end
 
   def listAdapter(_, sectionControllerForObject: object)
-    if object.is_a?(Message)
-      MessageSectionController.new
-    elsif object.is_a?(Weather)
-      WeatherSectionController.new
-    else
-      JournalSectionController.new
-    end
+    Object.const_get("#{object.class.name}SectionController").new
   end
 
   def emptyViewForListAdapter(_)
