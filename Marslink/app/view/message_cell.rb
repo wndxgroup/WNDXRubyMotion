@@ -45,13 +45,13 @@ class MessageCell < UICollectionViewCell
     self.title_label = UILabel.new.tap do |label|
       label.backgroundColor = UIColor.clearColor
       label.font = Theme::Base.app_font(14)
-      label.textColor = UIColor.colorWithRed(0.26, green:0.78, blue:0.29, alpha:1.0)
+      label.textColor = "#44758b".to_color
     end
   end
 
   def create_status_label
     self.status_label = UILabel.new.tap do |label|
-      label_color = UIColor.colorWithRed(0.46, green:0.53, blue:0.62, alpha:1.0)
+      label_color = "#76879d".to_color
       label.layer.borderColor = label_color.CGColor
       label.layer.borderWidth = 1
       label.backgroundColor = UIColor.clearColor
@@ -64,7 +64,7 @@ class MessageCell < UICollectionViewCell
 
   def initWithFrame(frame)
     super
-    contentView.backgroundColor = UIColor.colorWithRed(0.05, green: 0.12, blue: 0.25, alpha: 1.0)
+    contentView.backgroundColor = "#0c1f3f".to_color
     contentView.addSubview(create_message_label)
     contentView.addSubview(create_title_label)
     contentView.addSubview(create_status_label)

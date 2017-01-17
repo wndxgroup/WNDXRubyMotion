@@ -36,7 +36,7 @@ class WeatherSummaryCell < UICollectionViewCell
     self.expand_label = UILabel.new.tap do |label|
       label.backgroundColor = UIColor.clearColor
       label.font = Theme::Base.app_font(30)
-      label.textColor = UIColor.colorWithRed(0.26, green:0.78, blue:0.29, alpha:1.0)
+      label.textColor = "#44758b".to_color
       label.textAlignment = NSTextAlignmentCenter
       label.text = ">>"
       label.sizeToFit
@@ -51,7 +51,7 @@ class WeatherSummaryCell < UICollectionViewCell
       paragraph_style.paragraphSpacing = 4
       subtitle_attributes = {
         NSFontAttributeName => Theme::Base.app_font(14),
-        NSForegroundColorAttributeName => UIColor.colorWithRed(0.26, green:0.78, blue:0.29, alpha:1.0),
+        NSForegroundColorAttributeName => "#44758b".to_color,
         NSParagraphStyleAttributeName => paragraph_style
       }
       title_attributes = {
@@ -67,7 +67,7 @@ class WeatherSummaryCell < UICollectionViewCell
 
   def initWithFrame(frame)
     super
-    contentView.backgroundColor = UIColor.colorWithRed(0.05, green: 0.12, blue: 0.25, alpha: 1.0)
+    contentView.backgroundColor = "#0c1f3f".to_color
     contentView.addSubview(create_expand_label)
     contentView.addSubview(create_title_label)
     self

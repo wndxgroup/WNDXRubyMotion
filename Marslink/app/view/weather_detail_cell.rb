@@ -27,7 +27,7 @@ class WeatherDetailCell < UICollectionViewCell
     self.title_label = UILabel.new.tap do |label|
       label.backgroundColor = UIColor.clearColor
       label.font = Theme::Base.app_font
-      label.textColor = UIColor.colorWithRed(0.26, green:0.78, blue:0.29, alpha:1.0)
+      label.textColor = "#44758b".to_color
     end
   end
 
@@ -35,7 +35,7 @@ class WeatherDetailCell < UICollectionViewCell
     self.detail_label = UILabel.new.tap do |label|
       label.backgroundColor = UIColor.clearColor
       label.font = Theme::Base.app_font
-      label.textColor = UIColor.colorWithRed(0.26, green:0.78, blue:0.29, alpha:1.0)
+      label.textColor = "#44758b".to_color
       label.textAlignment = NSTextAlignmentRight
     end
   end
@@ -44,7 +44,7 @@ class WeatherDetailCell < UICollectionViewCell
     super
     contentView.addSubview(create_title_label)
     contentView.addSubview(create_detail_label)
-    contentView.backgroundColor = UIColor.colorWithRed(0.05, green: 0.12, blue: 0.25, alpha: 1.0)
+    contentView.backgroundColor = "#0c1f3f".to_color
     self
   end
 
