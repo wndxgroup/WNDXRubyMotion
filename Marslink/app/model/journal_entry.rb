@@ -21,6 +21,8 @@
 # THE SOFTWARE.
 #
 class JournalEntry < NSObject
+  include DiffableProtocol
+
   attr_accessor :date, :user, :text
 
   def initialize(date, text, user)

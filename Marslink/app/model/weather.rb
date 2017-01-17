@@ -20,18 +20,24 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 #
-class AppDelegate
-  def application(application, didFinishLaunchingWithOptions:launchOptions)
-    rootViewController = UIViewController.alloc.init
-    rootViewController.title = 'Marslink'
-    rootViewController.view.backgroundColor = UIColor.blackColor
+class Weather < NSObject
+  include DiffableProtocol
 
-    navigationController = UINavigationController.alloc.initWithNavigationBarClass(CustomNavigationBar.self, toolbarClass: nil)
-    navigationController.pushViewController(FeedViewController.new, animated: false)
+  attr_accessor :temperature,
+                :high,
+                :low,
+                :date,
+                :sunrise,
+                :sunset,
+                :condition
 
-    @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
-    @window.rootViewController = navigationController
-    @window.makeKeyAndVisible
-    true
+  def initialize(temp, high, low, date, sunrise, sunset, condition = nil)
+    self.temperature = temp
+    self.high = high
+    self.low = low
+    self.date = date
+    self.sunrise = sunrise
+    self.sunset = sunset
+    self.condition = condition
   end
 end

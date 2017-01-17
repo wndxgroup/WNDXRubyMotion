@@ -20,18 +20,14 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 #
-class AppDelegate
-  def application(application, didFinishLaunchingWithOptions:launchOptions)
-    rootViewController = UIViewController.alloc.init
-    rootViewController.title = 'Marslink'
-    rootViewController.view.backgroundColor = UIColor.blackColor
+class Message < NSObject
+  include DiffableProtocol
 
-    navigationController = UINavigationController.alloc.initWithNavigationBarClass(CustomNavigationBar.self, toolbarClass: nil)
-    navigationController.pushViewController(FeedViewController.new, animated: false)
+  attr_accessor :date, :user, :text
 
-    @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
-    @window.rootViewController = navigationController
-    @window.makeKeyAndVisible
-    true
+  def initialize(date, text, user)
+    self.date = date
+    self.text = text
+    self.user = user
   end
 end

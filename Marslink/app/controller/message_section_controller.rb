@@ -20,18 +20,35 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 #
-class AppDelegate
-  def application(application, didFinishLaunchingWithOptions:launchOptions)
-    rootViewController = UIViewController.alloc.init
-    rootViewController.title = 'Marslink'
-    rootViewController.view.backgroundColor = UIColor.blackColor
+class MessageSectionController < IGListSectionController
+  attr_accessor :message
 
-    navigationController = UINavigationController.alloc.initWithNavigationBarClass(CustomNavigationBar.self, toolbarClass: nil)
-    navigationController.pushViewController(FeedViewController.new, animated: false)
+  def init
+    super
+    self.inset = UIEdgeInsetsMake(0,0,15,0)
+    self
+  end
 
-    @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
-    @window.rootViewController = navigationController
-    @window.makeKeyAndVisible
-    true
+  def numberOfItems
+    1
+  end
+
+  def sizeForItemAtIndex(index)
+    return CGRectZero unless collectionContext && message
+    MessageCell.cell_size(collectionContext.containerSize.width, self.message.text)
+  end
+
+  def cellForItemAtIndex(index)
+    cell = collectionContext.dequeueReusableCellOfClass(MessageCell.self, forSectionController: self, atIndex: index)
+    cell.message_label.text = self.message.text
+    cell.title_label.text = self.message.user.name.upcase
+    cell
+  end
+
+  def didUpdateToObject(object)
+    self.message = object
+  end
+
+  def didSelectItemAtIndex(_)
   end
 end

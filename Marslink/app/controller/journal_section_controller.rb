@@ -20,18 +20,48 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 #
-class AppDelegate
-  def application(application, didFinishLaunchingWithOptions:launchOptions)
-    rootViewController = UIViewController.alloc.init
-    rootViewController.title = 'Marslink'
-    rootViewController.view.backgroundColor = UIColor.blackColor
+class JournalSectionController < IGListSectionController
+  attr_accessor :entry
 
-    navigationController = UINavigationController.alloc.initWithNavigationBarClass(CustomNavigationBar.self, toolbarClass: nil)
-    navigationController.pushViewController(FeedViewController.new, animated: false)
+  def sol_formatter
+    @sol_formatter ||= SolFormatter.new
+  end
 
-    @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
-    @window.rootViewController = navigationController
-    @window.makeKeyAndVisible
-    true
+  def init
+    super
+    self.inset = UIEdgeInsetsMake(0,0,15,0)
+    self
+  end
+
+  def numberOfItems
+    2
+  end
+
+  def sizeForItemAtIndex(index)
+    return CGRectZero unless collectionContext && entry
+    width = collectionContext.containerSize.width
+    if index == 0
+      CGSizeMake(width, 30)
+    else
+      JournalEntryCell.cell_size(width, self.entry.text)
+    end
+  end
+
+  def cellForItemAtIndex(index)
+    cell_class = index == 0 ? JournalEntryDateCell.self : JournalEntryCell.self
+    cell = collectionContext.dequeueReusableCellOfClass(cell_class, forSectionController: self, atIndex: index)
+    if cell.instance_of? JournalEntryDateCell
+      cell.label.text = "SOL #{sol_formatter.sols(self.entry.date)}"
+    elsif cell.instance_of? JournalEntryCell
+      cell.label.text = self.entry.text
+    end
+    cell
+  end
+
+  def didUpdateToObject(object)
+    self.entry = object
+  end
+
+  def didSelectItemAtIndex(_)
   end
 end

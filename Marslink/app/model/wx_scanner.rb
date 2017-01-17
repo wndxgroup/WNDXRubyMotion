@@ -20,18 +20,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 #
-class AppDelegate
-  def application(application, didFinishLaunchingWithOptions:launchOptions)
-    rootViewController = UIViewController.alloc.init
-    rootViewController.title = 'Marslink'
-    rootViewController.view.backgroundColor = UIColor.blackColor
-
-    navigationController = UINavigationController.alloc.initWithNavigationBarClass(CustomNavigationBar.self, toolbarClass: nil)
-    navigationController.pushViewController(FeedViewController.new, animated: false)
-
-    @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
-    @window.rootViewController = navigationController
-    @window.makeKeyAndVisible
-    true
+class WxScanner
+  def self.current_weather
+    Weather.new(6, 13, -69, Time.now, "05:42", "17:58")
   end
 end

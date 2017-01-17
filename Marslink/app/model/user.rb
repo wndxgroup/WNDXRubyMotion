@@ -21,10 +21,10 @@
 # THE SOFTWARE.
 #
 class User < NSObject
-  attr_accessor :userid, :username
+  attr_accessor :userid, :name
 
   def initialize(id, name)
     self.userid = id
-    self.username = name
+    self.name = name
   end
 end
