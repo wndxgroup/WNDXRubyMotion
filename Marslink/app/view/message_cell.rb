@@ -45,7 +45,7 @@ class MessageCell < UICollectionViewCell
     self.title_label = UILabel.new.tap do |label|
       label.backgroundColor = UIColor.clearColor
       label.font = Theme::Base.app_font(14)
-      label.textColor = "#44758b".to_color
+      label.textColor = "#42c84b".to_color
     end
   end
 

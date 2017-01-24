@@ -51,7 +51,7 @@ class WeatherSummaryCell < UICollectionViewCell
       paragraph_style.paragraphSpacing = 4
       subtitle_attributes = {
         NSFontAttributeName => Theme::Base.app_font(14),
-        NSForegroundColorAttributeName => "#44758b".to_color,
+        NSForegroundColorAttributeName => "#42c84b".to_color,
         NSParagraphStyleAttributeName => paragraph_style
       }
       title_attributes = {
