@@ -57,10 +57,9 @@ class FeedViewController < UIViewController
   end
 
   def objectsForListAdapter(_)
-    (loader.entries +
-        pathfinder.messages +
-          [WxScanner.current_weather]
-    ).sort_by! {|entry| entry.date}.reverse
+    [WxScanner.current_weather] +
+      (loader.entries +
+        pathfinder.messages).sort_by! {|entry| entry.date}.reverse
   end
 
   def listAdapter(_, sectionControllerForObject: object)
