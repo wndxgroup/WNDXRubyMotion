@@ -19,6 +19,8 @@ and understanding was my goal, so I can move on to the more complex issues, like
 
 This example illustrates the creation of an AppleTV app, displaying weather for several pre-defined locations. This app is very loosely based on [Appcoda's tvOS introduction](https://www.appcoda.com/tvos-introduction/)
 
+Uses [Climacons font](https://github.com/christiannaths/Climacons-Font).
+
 ## FlowRubyGemsActivity
 
 This is an example of using Flow, based on https://motionpdx.github.io/blog/2016/07/14/cross-platform-mobile-development-with-flow/.  But I tweaked some of the startup things, and I pulled data from the Ruby Gems Activity API endpoint.

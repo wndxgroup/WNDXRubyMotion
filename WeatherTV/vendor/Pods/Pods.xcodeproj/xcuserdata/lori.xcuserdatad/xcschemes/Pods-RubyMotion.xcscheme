@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'D666C0959F40D72371F524A1B04D6364'
-               BlueprintName = 'Pods-RubyMotion'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-RubyMotion.a'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A477500BC2A012534897C79DF9B6FC1D"
+               BuildableName = "libPods-RubyMotion.a"
+               BlueprintName = "Pods-RubyMotion"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

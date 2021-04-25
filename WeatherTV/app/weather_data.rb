@@ -9,9 +9,9 @@ class WeatherData
     self.icon = current.climacon.chr # Coming in as Fixnum, but it's a char
   end
 
+  # Finds and opens the json file, from the resources dir, which contains the data to be loaded
   def self.load
-    # Finds and opens the json file, from the resources dir, which contains the data to be loaded
-    path = NSBundle.mainBundle.pathForResource("Locations", ofType:"json")
+    path = File.join(App.resources_path, 'Locations.json')
     BW::JSON.parse(NSData.dataWithContentsOfFile(path))
   end
 

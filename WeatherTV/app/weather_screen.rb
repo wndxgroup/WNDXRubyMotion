@@ -9,30 +9,30 @@ class WeatherScreen < PM::Screen
     @temperature_label = add UILabel.new, frame: [[ 200, 400 ], [ 500, 100 ]]
     @description_label = add UILabel.new, frame: [[ 200, 500 ], [ 500, 100 ]]
     observe(self, :weather) do |_, new_value|
-      load_weather_values(new_value)
+      Dispatch::Queue.main.async { update_displayed_weather(new_value) }
     end
     self.get_weather
   end
 
   def will_appear
-    load_weather_values(self.weather)
+    update_displayed_weather(self.weather)
   end
 
   def location=(location_hash)
-    @location = location_hash
-    self.title = @location[:name]
+    self.title = location_hash[:name]
+    @location = CLLocation.alloc.initWithLatitude(location_hash[:lat], longitude: location_hash[:long])
   end
 
   def get_weather
     request = CZForecastioRequest.newForecastRequest
-    request.location = CZWeatherLocation.locationFromLocation(CLLocation.alloc.initWithLatitude(@location[:lat], longitude: @location[:long]))
+    request.location = CZWeatherLocation.locationFromLocation(@location)
     request.key = "663717908dcb4a1eb20e7cab8104e52b"
-    request.sendWithCompletion -> (data, error) {
+    request.sendWithCompletion -> (data, _) {
       self.weather = WeatherData.new(data.current)
     }
   end
 
-  def load_weather_values(new_value)
+  def update_displayed_weather(new_value)
     puts new_value.inspect
     return if new_value.nil?
     @symbol_label.text = new_value.icon

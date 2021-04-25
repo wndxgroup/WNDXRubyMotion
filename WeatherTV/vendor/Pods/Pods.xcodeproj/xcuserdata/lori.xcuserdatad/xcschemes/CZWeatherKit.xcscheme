@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '41EB6C0CFDA334C77BCE64ABC44F611C'
-               BlueprintName = 'CZWeatherKit'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libCZWeatherKit.a'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "580EF7BA87A2FA6C3185428491017A5C"
+               BuildableName = "libCZWeatherKit.a"
+               BlueprintName = "CZWeatherKit"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
