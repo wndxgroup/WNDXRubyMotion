@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 $:.unshift("/Library/RubyMotion/lib")
+$:.unshift("~/.rubymotion/rubymotion-templates")
 require 'motion/project/template/ios'
 
 require 'bundler'
@@ -11,3 +12,4 @@ Motion::Project::App.setup do |app|
   app.name = 'FailedBankCD'
   app.frameworks += %w(CoreData)
 end
+task :"build:simulator" => :"schema:build"
