@@ -3,6 +3,12 @@ WNDXRubyMotion
 
 Extended example apps for RubyMotion
 
+## CustomBadge
+
+This is a RubyMotion port of Jonathan Rasmusson's Swift Arcade 
+CustomBadge example. It illustrates the ability to create custom
+UI bits and pieces.
+
 ## FailedBanksCD
 
 This example is an extension of the RubyMotion Sample app called [Locations](https://github.com/HipByte/RubyMotionSamples/tree/master/Locations). 

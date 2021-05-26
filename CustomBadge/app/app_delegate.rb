@@ -1,6 +1,6 @@
 class AppDelegate
   def application(application, didFinishLaunchingWithOptions:launchOptions)
-    rootViewController = ViewController1.alloc.init
+    rootViewController = ViewController2.alloc.init
     rootViewController.title = 'CustomBadge'
 
     navigationController = UINavigationController.alloc.initWithRootViewController(rootViewController)
