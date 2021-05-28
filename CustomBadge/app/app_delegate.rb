@@ -3,10 +3,8 @@ class AppDelegate
     rootViewController = ViewController2.alloc.init
     rootViewController.title = 'CustomBadge'
 
-    navigationController = UINavigationController.alloc.initWithRootViewController(rootViewController)
-
     @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
-    @window.rootViewController = navigationController
+    @window.rootViewController = rootViewController
     @window.makeKeyAndVisible
 
     true
