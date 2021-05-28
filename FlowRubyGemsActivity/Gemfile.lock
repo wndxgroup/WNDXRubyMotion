@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     motion-flow (0.1.8)
-    rake (11.3.0)
+    rake (12.3.3)
 
 PLATFORMS
   ruby
