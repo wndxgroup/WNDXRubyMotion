@@ -7,7 +7,8 @@ Extended example apps for RubyMotion
 
 This is a RubyMotion port of Jonathan Rasmusson's Swift Arcade 
 CustomBadge example. It illustrates the ability to create custom
-UI bits and pieces.
+UI bits and pieces. Flip the rootViewController in app_delegate.rb
+to 1 or 2, depending on which part you want to look at.
 
 ## FailedBanksCD
 
