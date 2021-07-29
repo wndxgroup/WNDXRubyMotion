@@ -6,9 +6,12 @@ Extended example apps for RubyMotion
 ## CustomBadge
 
 This is a RubyMotion port of Jonathan Rasmusson's Swift Arcade 
-CustomBadge example. It illustrates the ability to create custom
+[CustomBadge](https://github.com/jrasmusson/swift-arcade/tree/master/Design/CustomBadge) example. It illustrates the ability to create custom
 UI bits and pieces. Flip the rootViewController in app_delegate.rb
-to 1 or 2, depending on which part you want to look at.
+to 1, 2 or 3, depending on which part you want to look at.
+
+In Part 3, we depart from Jonathan's example, and create our own 
+badge, without using external lib.
 
 ## FailedBanksCD
 
