@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/wndxgroup/BubbleWrap.git
+  remote: https://github.com/wndxgroup/BubbleWrap.git
   revision: cbc21a11465552d69b7ddcf3b5407156b504d147
   branch: tvos-fixes
   specs:
@@ -53,7 +53,7 @@ GEM
       public_suffix
       typhoeus (~> 1.0)
     cocoapods-deintegrate (1.0.4)
-    cocoapods-downloader (1.4.0)
+    cocoapods-downloader (1.6.3)
     cocoapods-plugins (1.0.0)
       nap
     cocoapods-search (1.0.0)
